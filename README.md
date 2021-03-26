@@ -18,6 +18,12 @@ npm install && npm run build && npm run dev
 
 > npm@7+ is required to use the [workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) feature.<br/>Update to latest with: `npm install -g npm@latest`
 
+To start Storybook:
+
+```bash
+cd packages/shared-ui
+yarn storybook
+```
 
 ## Features
 
