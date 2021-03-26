@@ -1,0 +1,10 @@
+{
+  "name": "guild-components",
+  "version": "1.0.0",
+  "description": "Components for The Guild",
+  "main": "index.js",
+  "repository": "https://github.com/FrontWorkDotDev/guild-components",
+  "author": "FrontWorkDotDev",
+  "license": "MIT",
+  "private": false
+}
