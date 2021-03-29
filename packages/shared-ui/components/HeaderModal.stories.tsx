@@ -6,7 +6,7 @@ import { HeaderModal, HeaderModalProps } from './HeaderModal'
 export default {
   title: 'HeaderModal',
   component: HeaderModal,
-  argTypes: {},
+  parameters: { actions: { argTypesRegex: '^on.*' } },
 } as Meta
 
 const Template: Story<HeaderModalProps> = args => (

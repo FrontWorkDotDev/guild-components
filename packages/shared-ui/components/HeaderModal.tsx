@@ -2,16 +2,19 @@ import React from 'react'
 import './Header.css'
 
 export interface HeaderModalProps {
-  linkUrl: string
+  linkUrl?: string
+  onClose: () => void
 }
 
 export const HeaderModal: React.FC<HeaderModalProps> = props => {
-  const { linkUrl = 'https://the-guild.dev' } = props
+  const { linkUrl = 'https://the-guild.dev', onClose } = props
 
   return (
     <div id="ossModal" className="g-modal">
       <div className="g-modal-content">
-        <span className="g-close">&times;</span>
+        <span className="g-close" onClick={onClose}>
+          &times;
+        </span>
         <h3>Featured Products</h3>
         <hr />
         {/* <!--<h3>GraphQL Products</h3>--> */}

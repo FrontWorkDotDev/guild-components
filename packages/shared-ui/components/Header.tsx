@@ -8,6 +8,7 @@ export interface HeaderProps {
 
 export const Header: React.FC<HeaderProps> = props => {
   const { linkUrl = 'https://the-guild.dev' } = props
+  const [modalOpen, setModalOpen] = React.useState(false)
 
   return (
     <>
@@ -24,13 +25,16 @@ export const Header: React.FC<HeaderProps> = props => {
           <a href={`${linkUrl}/services`} className="g-header-links">
             Our Services
           </a>
-          <a id="oss-nav" className="g-header-links">
+          <a
+            id="oss-nav"
+            className="g-header-links"
+            onClick={() => setModalOpen(true)}
+          >
             Open Source
             <img
               src={`${linkUrl}/static/go-down.svg`}
               height="10"
               width="12"
-              // style="color:black;"
               style={{ color: 'black' }}
             />
           </a>
@@ -43,7 +47,7 @@ export const Header: React.FC<HeaderProps> = props => {
           </a>
         </div>
       </div>
-      <HeaderModal />
+      {modalOpen && <HeaderModal onClose={() => setModalOpen(false)} />}
     </>
   )
 }
