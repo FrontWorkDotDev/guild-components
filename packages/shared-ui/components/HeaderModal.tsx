@@ -18,7 +18,10 @@ export const HeaderModal: React.FC<HeaderModalProps> = props => {
         <h3>Featured Products</h3>
         <hr />
         {/* <!--<h3>GraphQL Products</h3>--> */}
-        <div className="productTable" align="center">
+        <div
+          className="productTable"
+          // align="center"
+        >
           <div className="flex-item-left">
             <div className="ossCells">
               <img
