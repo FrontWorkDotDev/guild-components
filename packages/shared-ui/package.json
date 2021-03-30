@@ -1,18 +1,25 @@
 {
   "name": "guild-components",
-  "version": "1.0.0",
-  "main": "components/index.tsx",
+  "version": "1.0.2",
+  "license": "MIT",
+  "main": "dist/index.jsx",
   "types": "components-types/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "components-types/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "yarn run build",
+    "version": "git add -A .",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "typescript": "^4.2.3"
   },
-  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@storybook/addon-actions": "^6.1.21",
