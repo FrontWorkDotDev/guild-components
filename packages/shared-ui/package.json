@@ -1,9 +1,13 @@
 {
   "name": "guild-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "dist/index.jsx",
   "types": "components-types/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "components-types/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
